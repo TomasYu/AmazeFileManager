@@ -31,6 +31,12 @@ allprojects {
         mavenCentral()
         maven { url "https://jitpack.io" }
         maven { url "https://jcenter.bintray.com" }
+
+        maven { url = "https://pkgs.d.xiaomi.net:443/artifactory/maven-remote-virtual/" }
+        maven { url = "https://pkgs.d.xiaomi.net:443/artifactory/maven-snapshot-virtual/" }
+        maven { url = "https://pkgs.d.xiaomi.net:443/artifactory/maven-release-virtual/" }
+        maven { url = "https://pkgs.d.xiaomi.net/artifactory/public" }
+        maven { url = "https://pkgs.d.xiaomi.net:443/artifactory/public" }
     }
     tasks.withType(Test).tap {
         configureEach {

@@ -22,6 +22,7 @@ package com.amaze.filemanager.application;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
 import org.acra.ACRA;
@@ -49,6 +50,9 @@ import com.amaze.filemanager.ui.provider.UtilitiesProvider;
 import com.amaze.filemanager.utils.ScreenUtils;
 import com.amaze.trashbin.TrashBin;
 import com.amaze.trashbin.TrashBinConfig;
+import com.xiaomi.cloudkit.dbsync.CKManager;
+import com.xiaomi.cloudkit.dbsync.strategy.FileConflictStrategy;
+import com.xiaomi.cloudkit.filesync.FileSyncManager;
 
 import android.app.Activity;
 import android.app.Application;
@@ -118,6 +122,9 @@ public class AppConfig extends GlideApplication {
     StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
     StrictMode.setVmPolicy(builder.build());
     log = LoggerFactory.getLogger(AppConfig.class);
+    CKManager.INSTANCE.init(this
+            , R.xml.config,new ArrayList<>());
+    FileSyncManager.INSTANCE.setSyncStrategy(FileConflictStrategy.LOCAL_FIRST);
   }
 
   @Override

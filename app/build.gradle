@@ -186,7 +186,7 @@ dependencies {
     androidTestImplementation libs.awaitility
 
     //Detect memory leaks
-    debugImplementation libs.leakcanary.android
+//    debugImplementation libs.leakcanary.android
 
     implementation libs.commons.compress
 
@@ -260,6 +260,9 @@ dependencies {
 
     implementation libs.gson
     implementation libs.amaze.trashBin
+    implementation libs.cloudkit
+
+
 }
 
 kotlin {

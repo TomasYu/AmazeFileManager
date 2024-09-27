@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <pkg>com.omgodse.notally.debug</pkg>
+
+    <container>
+        <schemaVersion>1</schemaVersion>
+        <containerName>container1Name</containerName>
+        <containerId>11001</containerId>
+        <recordZoneId>3</recordZoneId>
+
+        <fileType>
+            <internal>
+                <path>files</path>
+            </internal>
+            <external>
+                <path>files/Images</path>
+                <path>files/Audios</path>
+            </external>
+            <public>
+                <showName>publicRecord2</showName>
+            </public>
+        </fileType>
+    </container>
+
+</configuration>
+
+

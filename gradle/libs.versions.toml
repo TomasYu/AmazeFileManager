@@ -1,5 +1,5 @@
 [versions]
-compileSdk = "33"
+compileSdk = "34"
 jdk9Deps = "1.0"
 minSdk = "19"
 targetSdk = "33"
@@ -70,6 +70,8 @@ mpAndroidChart = "v3.0.2"
 concurrentTrees = "2.6.1"
 aboutLibraries = "6.1.1"
 amazeTrashBin = "1.0.10"
+#cloudkitversion = "0.0.8-SNAPSHOT"
+cloudkitversion = "0.0.9-SNAPSHOT"
 
 [libraries]
 androidX-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidXAppCompat" }
@@ -169,3 +171,4 @@ acra-core = { module = "ch.acra:acra-core", version.ref = "acraCore" }
 leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanaryAndroid" }
 
 amaze-trashBin = { module = "com.github.TeamAmaze:AmazeTrashBin", version.ref = "amazeTrashBin" }
+cloudkit = { module = "com.xiaomi.cloudkit:sdk", version.ref = "cloudkitversion" }
