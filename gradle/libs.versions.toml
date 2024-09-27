@@ -1,5 +1,6 @@
 [versions]
 compileSdk = "33"
+jdk9Deps = "1.0"
 minSdk = "19"
 targetSdk = "33"
 
@@ -12,7 +13,7 @@ glide = "4.14.2"
 sshj = "0.35.0"
 jcifs = "2.1.9"
 eventbus = "3.3.1"
-fabSpeedDial = "3.1.1"
+fabSpeedDial = "3.2.0"
 room = "2.5.2"
 bouncyCastle = "1.76"
 awaitility = "3.1.6"
@@ -112,6 +113,7 @@ eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
 concurrent-trees = { module = "com.github.npgall:concurrent-trees", version.ref = "concurrentTrees" }
 
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+jdk9-deps = { module = "com.github.pengrad:jdk9-deps", version.ref = "jdk9Deps" }
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
 
 kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlinStdlibJdk8" }
