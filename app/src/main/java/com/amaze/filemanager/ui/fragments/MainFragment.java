@@ -649,7 +649,8 @@ public class MainFragment extends Fragment
     }
 
     OpenMode openMode = providedOpenMode;
-    String actualPath = FileProperties.remapPathForApi30OrAbove(providedPath, false);
+//    String actualPath = FileProperties.remapPathForApi30OrAbove(providedPath, false);
+    String actualPath = providedPath;
 
     if (SDK_INT >= Q && ArraysKt.any(ANDROID_DATA_DIRS, providedPath::contains)) {
       openMode = loadPathInQ(actualPath, providedPath, providedOpenMode);
@@ -695,6 +696,10 @@ public class MainFragment extends Fragment
     } else if (actualPath.equals(providedPath)) {
       return providedMode;
     } else {
+      if (true){
+        return OpenMode.FILE;
+
+      }
       boolean hasAccessToSpecialFolder = false;
       List<UriPermission> uriPermissions =
           requireContext().getContentResolver().getPersistedUriPermissions();

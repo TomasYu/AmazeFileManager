@@ -399,7 +399,7 @@ public class TabFragment extends Fragment {
       b.putString("lastpath", tab.getOriginalPath(savePaths, requireMainActivity().getPrefs()));
     }
 
-    b.putString("home", tab.home);
+    b.putString("home", getContext().getFilesDir().getAbsolutePath());
     b.putInt("no", tab.tabNumber);
     // specifies if the constructed MainFragment hides the FAB when it is shown
     b.putBoolean(MainFragment.BUNDLE_HIDE_FAB, hideFabInTab);

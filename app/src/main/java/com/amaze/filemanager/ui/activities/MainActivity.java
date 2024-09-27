@@ -789,7 +789,7 @@ public class MainActivity extends PermissionsActivity
           && !volume.getState().equalsIgnoreCase(Environment.MEDIA_MOUNTED_READ_ONLY)) {
         continue;
       }
-      File path = Utils.getVolumeDirectory(volume);
+      File path = MainActivity.this.getExternalFilesDir(null).getAbsoluteFile();
       String name = volume.getDescription(this);
       if (INTERNAL_SHARED_STORAGE.equalsIgnoreCase(name)) {
         name = getString(R.string.storage_internal);
